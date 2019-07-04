@@ -15,12 +15,11 @@ import javafx.stage.Stage;
  *
  * @author usuario
  */
-public class Controlador2 {
-     private Vista2 vista;
+public class Controlador3 {
+    private Vista3 vista;
     private Dao modelo;
-
-    public Controlador2() {
-        this.vista = new Vista2();
+     public Controlador3() {
+        this.vista = new Vista3();
         this.vista.getGuardar().setOnAction(new Evento()); //Aqui se define la accion del boton ok
         this.modelo = new Dao("bd.txt");
     }
@@ -29,7 +28,7 @@ public class Controlador2 {
 
         @Override
         public void handle(ActionEvent event) {
-           Controlador3 controlador =new Controlador3();
+           Controlador1 controlador =new Controlador1();
          Vista vista =controlador.getVista();
          Singleton singleton= Singleton.getSingleton();
          Stage stage=singleton.getStage();
@@ -39,9 +38,7 @@ public class Controlador2 {
     
     }
 
-    public Vista2 getVista() {
+    public Vista3 getVista() {
         return vista;
     }
-
 }
-
